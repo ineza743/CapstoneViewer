@@ -1,0 +1,61 @@
+ul li a {
+    font-size-adjust: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    padding: 40px;
+}
+
+nav {
+    background-color: #1b1b1b !important;
+}
+
+.action-cards{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 1700px;
+    align-items: center;
+    background-position: center;
+    padding: 0vw 10vw 0vw 10vw;
+    padding-top: 10%;
+}
+.card-title{
+    font-weight: bold;
+}
+
+
+.btn-group {
+    padding-top: 100px;
+}
+.footer {
+    background: #1b1b1b;
+    padding: 2%;
+    margin-top: 600px;
+    color: white;
+    text-align: center;
+}
+
+    
+    .example-1 {
+    text-align: center;
+    margin-top: 10%;
+    position: relative;
+    overflow-y: scroll;
+    height: 200px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

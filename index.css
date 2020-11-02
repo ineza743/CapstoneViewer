@@ -1,0 +1,81 @@
+
+.navbar {
+    background-color: burlywood !important;
+}
+
+
+ul li a {
+    font-weight: bold;
+    color: black;
+    padding: 40px;
+} 
+
+.action-cards{
+    background: url("banner.jpg");
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 0vw 5vw 0vw 5vw;
+    padding-top: 20%;
+    background-color: black;
+    padding-bottom: 9%;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: xx-large;
+
+}
+
+
+#banner {
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 50vh;
+   
+}
+
+#jumbo {
+    padding-top: 30px;
+    margin-top: 10%;
+
+}
+
+.footer {
+    background: #1b1b1b;
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+
+
+.about {
+    background-color: rgb(66, 58, 47);
+    text-align: center;
+    color: whitesmoke;
+    font: bolder;
+    padding-top: 10%;
+   
+}
+
+.aboutpage {
+margin-bottom: 10%;
+background-color: rgb(66, 58, 47);
+
+}
+
+.aboutpage p {
+    font-weight: bold;
+   
+}
+
+
+
+
+
+
+
+  
+
