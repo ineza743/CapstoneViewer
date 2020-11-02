@@ -71,7 +71,9 @@ background-color: rgb(66, 58, 47);
    
 }
 
-
+body {
+    border-block-color: black;
+}
 
 
 

@@ -25,7 +25,7 @@
                     </li>
 
                       <li class="nav-item ">
-                        <a class="nav-link" href="#">Statistics </a>
+                        <a class="nav-link" href="statistics.php">Statistics </a>
                       </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="index.html">Logout </a>
@@ -59,8 +59,6 @@
         </div>
         </div>
 
-
-    </div>
 
 
 

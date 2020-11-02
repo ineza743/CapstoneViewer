@@ -5,6 +5,14 @@
             <!-- Latest compiled and minified CSS -->
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
             <link rel="stylesheet" href="index.css">
+
+            <style>
+                footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+      margin-top:29%;
+    }
+            </style>
     </head>
     <body >
     <div id="login">
@@ -41,9 +49,9 @@
 <!--Footer section-->
 <section id="footer">
 
-    <div class="footer">
-        <p> &copy; CapstoneViewer 2020 | Powered by Afsanat </p>
-    </div>
+<footer class="container-fluid text-center">
+<p> &copy; CapstoneViewer 2020 | Powered by Afsanat </p>
+</footer>
 
 </section>
 
