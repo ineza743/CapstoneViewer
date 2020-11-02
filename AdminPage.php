@@ -1,80 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Administrator page</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin page </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- my external css-->
+    <link rel="stylesheet" href="dashboard.css">
+
 </head>
+<body>
+<!-- HEADER (NAVBAR) -->
+<section id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+                <a class="navbar-brand" ><img src="logo.JPG" height="90px" width="150px"></a>
+               
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                      <a class="nav-link active" href="#">Dashboard </a>
+                    </li>
 
-<body style= "background-color: burlywood;">
-	
-<div class="container-fluid">
-		<div class="container">
-			<h2 class="text-center" id="title">INSERT Capstone</h2>
- 	
-			<div class="text-center" class="row">
-				<div class="text-center" class="col-md-5">
- 					<form  role="form" method="post" action="index.html">
-                         
-                     <div class="form-group">
-							
-                            <input type="text" name="Cname" id="Cname" class="form-control input-lg" placeholder="Capstone name">
-                        </div>
-
-                        <div class="form-group">
-							
-                            <input type="text" name="Teamname" id="Teamname" class="form-control input-lg" placeholder="Team name">
-                        </div>
-
-                     <div class="form-group">
-							
-                            <input type="text" name="fname" id="fname" class="form-control input-lg" placeholder=" Owner first name">
-                        </div>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="#">Statistics </a>
+                      </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Logout </a>
+                    </li>
+                  </ul>
+        </div>
+        </div> 
+      </nav>
+</section>
 
 
-                        <div class="form-group">
-							
-                            <input type="text" name="lname" id="lname" class="form-control input-lg" placeholder="Owner last name">
-                        </div>
-												
- 							<div class="form-group">
-							
-								<input type="text" name="username" id="username" class="form-control input-lg" placeholder="username">
-							</div>
 
-							<div class="form-group">
-							
-								<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
-							</div>
-							<div class="form-group">
-						
-								<input type="text" name="Lsupervisor" id="Lsupervisor" class="form-control input-lg" placeholder="supervisor last name">
-                            </div>
-                            
-                            <div class="form-group">
-						
-								<input type="text" name="Fsupervisor" id="Fsupervisor" class="form-control input-lg" placeholder="supervisor first name">
-                            </div>
+    <div class="col-sm-4 ">
+        <!--View-->
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">VIEW</h5>
+            <p class="card-text"> You can view all capstone done in Ashesi University by department
+            </p>
+            <a id="action-btn" href="dashboard.php" class="btn btn-primary action-btn">VIEW</a>
+        </div>
+        </div>
 
-                            <div class="form-group">
-						
-								<input type="text" name="description" id="description" class="form-control input-lg" placeholder="Capstone description">
-							</div>
+        <!--Insert-->
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">INSERT</h5>
+            <p class="card-text"> You can insert new capstone records here
+            </p>
+            <a id="action-btn" href="AdminInsert.php" class="btn btn-primary action-btn">Insert</a>
+        </div>
+        </div>
 
-		
- 							<div>
- 									  <input type="submit" class="btn btn-lg btn-primary"   value="INSERT">
- 							</div>
-						
-					</form>
-				</div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+    </div>
+
 
 
 <!--Footer section-->
@@ -86,11 +73,14 @@
 
 </section>
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
-
