@@ -15,85 +15,95 @@
 <!-- HEADER (NAVBAR) -->
 <section id="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <a class="navbar-brand" ><img src="logo.JPG" height="90px" width="150px"></a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
-                      <a class="nav-link active"  href="#">Home </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" href="#aboutid">About </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a class="nav-link active" href="statistics.php">Statistics </a>
-                      </li>
-
-                  </ul>
-        
+        <a class="navbar-brand" ><img src="pictures/logo.JPG" height="50px" width="100px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                <a class="nav-link active"  href="#">Home </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active" href="#aboutid">About </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active" href="statistics.php">Statistics </a>
+                </li>
+            </ul>
         </div> 
-      </nav>
+    </nav>
 </section>
 
 <!--signup-->
-<section id="signup">
-<div class="action-cards">
-    <div class="col-sm-5">
-        <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Student or Ashesi Personnel</h5>
-            <p class="card-text"> Signup as a student Ashesi Personnel to easly access all capstone projects done in Ashesi university
-            </p>
-            <a id="action-btn" href="signup.php" class="btn btn-primary action-btn">Signup</a>
-            <a id="action-btn" href="login.php" class="btn btn-primary action-btn">Login</a>
-        </div>
-        </div>
+
+<section id="banner">
+    <div class="container">
+        <div class="row mx-md-n5">
+            <div class="col px-md-6">
+                <div class="p-4 border bg-light p-5">
+                    <h5 class="card-title">Administrator</h5>
+                    <p class="card-text"> Signup as a student Ashesi Personnel to easly access all capstone projects done in Ashesi university</p>
+                    <div class="text-center">
+                        <a id="action-btn" href="signup.php" class="btn btn-primary action-btn">Signup</a>
+                        <a id="action-btn" href="login.php" class="btn btn-primary action-btn">Login</a>
+                    </div>
+                    </div>
+                </div>
+            <div class="col px-md-6">
+                <div class="p-4 border bg-light p-5">
+                    <h5 class="card-title">Student or Ashesi Personnel</h5>
+                    <p class="card-text"> Signup as an administrator if you have the rights to update the website</p>
+                    <div class="text-center">
+                        <a id="action-btn" href="Admin-signup.php" class="action-btn btn btn-primary">Signup</a>
+                        <a id="action-btn" href="AdminLogin.php" class="btn btn-primary action-btn">Login</a> 
+                    </div>
+                </div>
+            </div>
+          </div>
     </div>
-    <div class="col-sm-5">
-        <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Administrator</h5>
-            <p class="card-text">Signup as an administrator if you have the rights to update the website</p>
-            <a id="action-btn" href="Admin-signup.php" class="action-btn btn btn-primary">Signup</a>
-            <a id="action-btn" href="AdminLogin.php" class="btn btn-primary action-btn">Login</a>  
-        </div>
-        </div>
-    </div>
-</div>
 </section>
+
+
 
 <!-- About section -->
+<section> 
+    <div id="aboutid" class="aboutpage container-fluid">
+        <div class="container-fluid">
+            <h1 id="about" class="text-center text-black py-5" >About</h1>
+            <div class="row">
+            <div  class="col-lg-4 col-md-6 col-sm-6">
+                <h3> View current statistics </h3>
+        
+                <img class="img-responsive" src="pictures/statistic.jpg" class="img-thumbnail" width="460" height="250">
 
-  
-
-<section id="about" class="text-center"> 
-    <div class="aboutpage" id="aboutid">
-
-        <h1 class="about">About</h1>
-
-        <div class="row">
-            <div style="background-color: white;border-style: solid;" class="col-md-4">
-                <h4> <em>CapstoneViewer allows users to view all capstone projects done in Ashesi University with the ability to filter by date
-                </em></h4>
-                <img src="dateFilter.png" height="250px" width="250px">
+                <p style="font-weight: normal; padding-top: 5%; text-align: justify;"> CapstoneViewer allows users to view all capstone projects done in Ashesi University with the ability to see the current statistics of data. 
+                    The viewer can see the total number of capstone projects to date, women percentages and men percentages, and percentages of projects by department.
+                </p>
             </div>
-            <div style="background-color: rgb(207, 206, 206);border-style: solid;" class="col-md-4">
-                <h4><em>The database is apdated any time a capstone project is completed
-                </em></h4>
-                <img src="databaseupdate.png">
+            <div  class="col-lg-4 col-md-6 col-sm-6" >
+                <h3> Get updated data </h3>
+                <img class="img-responsive" src="pictures/databaseupdate.jpg" class="img-thumbnail" width="460" height="250" >
+                <p style="font-weight: normal; padding-top: 5%;"> The database is updated by the administrator everytime a capstone project is accomplished. The viewer sees all 
+                    projects that are up to date easily because projects are categorized according to the department.
+                </p>
             </div>
-            <div style="background-color:whitesmoke;border-style: solid;" class="col-md-4">
-                <h4><em>All details of the capstone projects are provided 
-                </em></h4>
-                <img src="information.jpg">
+            <div  class="col-lg-4 col-md-6 col-sm-6" >
+                <h3> View all details </h3>
+                <img class="img-responsive" src="pictures/info.jpg" class="img-thumbnail" width="460" height="250">
+                <p style="font-weight: normal; padding-top: 5%;"> All the details of the capstone project are provided. If the user wants to explore a certain project,
+                    the names of the implementer, the contacts of the implementer, and the objectives of the project are provided.
+                </p>
             </div>
-        </div>
-
-        <button class="btn btn-primary"> <a style="color: white;" href="https://www.ashesi.edu.gh/">Learn more </a></button> 
+            </div>
+            <div class="text-center p-5">
+                <a  href="https://www.ashesi.edu.gh/" class="action-btn btn btn-primary">Learn more </a>
+            </div>
+        </div>  
     </div>  
-
-
 </section>
  
+
 <!--contact us section-->
 <section id="jumbo" class="container text-center">
     <div class="container" id="contact">
