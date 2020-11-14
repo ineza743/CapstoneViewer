@@ -1,0 +1,15 @@
+
+form{
+    border: 10px solid burlywood;
+    padding: 15%;
+    background-color: rgb(230, 235, 240);
+}
+#login {
+    padding: 150px 110px 170px 400px;  
+}
+
+.navbar-brand {
+    margin-top: -20%;
+    margin-left: 30%;
+  
+}

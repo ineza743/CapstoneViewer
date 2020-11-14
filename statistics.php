@@ -7,18 +7,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- instyle for footer-->
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
+    footer {
+      background-color: burlywood;
+      padding: 25px;
+      margin-top:9%;
     }
     
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-      margin-top:10%;
+    .jumbotron {
+      background-color: burlywood;
     }
   </style>
 </head>
@@ -28,10 +27,10 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Statistics</h1>      
-    <p>Find below the statistics for CapstoneViewer</p>
   </div>
 </div>
   
+<!--first row-->
 <div class="container-fluid bg-3 text-center">    
  
   <div class="row">
@@ -54,6 +53,7 @@
   </div>
 </div><br>
 
+<!--second row-->
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-3">
@@ -74,6 +74,10 @@
     </div>
   </div>
 </div><br><br>
+
+     <div class="text-center p-5">
+          <a  style="color: white;font-size: large; padding:1%;" href="index.html" class="action-btn btn btn-primary"> Back </a>
+        </div>
 
 <footer class="container-fluid text-center">
 <p> &copy; CapstoneViewer 2020 | Powered by Afsanat </p>
