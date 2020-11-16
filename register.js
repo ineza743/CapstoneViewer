@@ -22,7 +22,7 @@ let Emailreg = /^[\w.\.+w.+\-]+@ashesi.edu.gh$/;
 
         //process only if the user has an Ashesi email
         if (emails === "" || !Emailreg.test(emails)) {
-            window.alert("Email is empty or invalid, it has to be an Ashesi email!!");
+            window.alert("Email is empty or invalid, it has to end with @ashesi.edu.gh");
             return false;  
         }
 

@@ -25,6 +25,7 @@ body {
     width: 100%;
     padding: 10px;
     background: transparent;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
     border: none;
     outline: none;
   }
