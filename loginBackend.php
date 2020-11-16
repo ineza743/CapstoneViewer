@@ -1,25 +1,25 @@
 
 <?php
-// create connection
+// create database connection
 $conn = mysqli_connect('localhost', 'root', '', 'capstoneviewer');
 
-// check connection
+// check if the connection works
 if (!$conn) {
     die('Connection failed: ' . mysqli_connect_error());
 }
 
-// grab form data
+// grab email and password from the form
 $email = $_POST['email'];
-$password = $_POST['pass'];
+$password = $_POST['password'];
 
-// write query
-$sql = "SELECT * FROM viewer WHERE email = '$email'";
+// write sql select query
+$select = "SELECT * FROM viewer WHERE email = '$email'";
 
-// execute query
-$result = mysqli_query($conn, $sql);
+// execute the query
+$result = mysqli_query($conn, $select);
 
 // check that exactly 1 row was returned
-if (mysqli_num_rows($result) != 1) {
+if (mysqli_num_rows($result) !=1) {
     die('login failed: '.mysqli_error($conn));
 }
 
