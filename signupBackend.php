@@ -37,14 +37,18 @@ $results = mysqli_query($dbconn, $insert);
 
 // check if the querry was executed
 if ($results) {
-    echo "User successfully registered";
     ?>
+    <p style="text-align: center;">User successfully registered</p>
+    <div class="text-center">
     <a href="login.php"  class="btn btn-primary action-btn">Login</a>
     <a href="index.html"  class="btn btn-primary action-btn">Home</a>
+     </div>
     <?php 
 } else {
     echo "Error: " . mysqli_error($dbconn);?>
+    <div class="text-center">
     <a href="Studentsignup.php"  class="btn btn-primary action-btn">Back</a>
+    </div>
     <?php 
 }
 
