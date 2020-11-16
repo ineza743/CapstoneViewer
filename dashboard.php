@@ -60,14 +60,7 @@ if ($verify_pass) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                      <a class="nav-link active" href="#">Dashboard </a>
-                    </li>
-
-                      <li class="nav-item ">
-                        <a class="nav-link" href="statistics.php">Statistics </a>
-                      </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="index.html">Logout </a>
+                        <a class="nav-link active" href="index.html">Logout </a>
                     </li>
                   </ul>
         </div>
