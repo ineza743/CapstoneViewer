@@ -12,8 +12,9 @@
 
 </head>
 <body>
-    
+   
 <?php
+/** 
 // create database connection
 $conn = mysqli_connect('localhost', 'root', '', 'capstoneviewer');
 
@@ -45,9 +46,6 @@ $passwordverify=password_verify($password ,$user['passwd']);
 // set user session if password is verified
 
 if ($passwordverify) {
-    echo $password;
-    echo $user['passwd'];
-    echo '<br>password verify'. $passwordverify;
     echo '<script>alert("Wrong password for the provided username")</script>';
     ?>
 
@@ -63,7 +61,8 @@ function goBack() {
 else{
     session_start();
     $_SESSION['user'] = $user['passwd'];
-    ?>
+    ?>*/?>
+
 
     <!-- HEADER (NAVBAR) -->
 <section id="header">
@@ -128,9 +127,6 @@ else{
     </div>
 
 </section>
-<?php
-}
-?>
 
 
 

@@ -44,16 +44,26 @@
 
 
 
+
 <!--BA-->
 <div class="row">
 
 
-  <div class="col-md-6 mb-4">
+
+  <div class="text-center" class="col-md-6 mb-4" >
+  <h4 id="section1"><strong>Business administration Major</strong></h4>
+        <!-- Search box -->
+        <form class="form-inline">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+            aria-label="Search">
+          </form>
 
     <div class="card example-1 scrollbar-ripe-malinka">
-      <div class="card-body">
-        <h4 id="section1"><strong>Business administration Major</strong></h4>
-        <a href="#">01/10/2020    weather application</a><br>
+      <div class="card-body" >
+
+
+        <br><a href="#">01/10/2020    weather application</a><br>
         <a href="#">02/10/2020    Cyusa More</a><br>
         <a href="#">03/10/2020    Meme generator</a><br>
         <a href="#">04/10/2020    Google map</a><br>
@@ -62,6 +72,11 @@
         <a href="#">28/10/2020    Uwase Delilah</a><br>
         <a href="#">29/10/2020    Uwase Delilah</a><br>
         <a href="#">30/10/2020    Uwase Delilah</a><br>
+        <a href="#">03/10/2020    Meme generator</a><br>
+        <a href="#">03/10/2020    Meme generator</a><br>
+        <a href="#">03/10/2020    Meme generator</a><br>
+        <a href="#">03/10/2020    Meme generator</a><br>
+        <a href="#">03/10/2020    Meme generator</a><br>
       </div>
     </div>
 
@@ -89,3 +104,6 @@
 
 </body>
 </html>
+
+
+
