@@ -2,12 +2,12 @@ ul li a {
     font-size-adjust: 100px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: black;
     padding: 40px;
 }
 
 nav {
-    background-color: #1b1b1b !important;
+    background-color: rgb(73, 59, 40) ;
+    padding-top: -1%;
 }
 
 .action-cards{
@@ -27,21 +27,22 @@ nav {
 
 
 .footer {
-    background: #1b1b1b;
-    padding: 10px;
+    background: rgb(73, 59, 40);
+    padding: 5px;
     margin-top: 10px;
     color: white;
     text-align: center;
 }
 
 .col-sm-4 {
-    padding-top: 9%;
-    background-color: blue;
+    padding-top: 1%;
+    margin-top: 5%;
+    background-color: burlywood;
     border: 1px white solid;
     display: inline-block;
     text-align: center;
     margin-left: 30%;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
    
 }
 

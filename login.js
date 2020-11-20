@@ -20,6 +20,7 @@ let Emailreg = /^[\w.\.+w.+\-]+@ashesi.edu.gh$/;
 }
 
 
+
     
 
     

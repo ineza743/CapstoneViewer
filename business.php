@@ -19,7 +19,7 @@
 <section id="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-                <a class="navbar-brand" ><img src="logo.JPG" height="90px" width="150px"></a>
+                <a class="navbar-brand" ><img src="pictures/logo.JPG" height="90px" width="150px"></a>
                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">

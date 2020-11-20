@@ -41,26 +41,40 @@ if (mysqli_num_rows($result) !=1) {
 $user = mysqli_fetch_assoc($result);
 
 // verify user password match
-$verify_pass = password_verify($password, $user['passwd']);
-
+$passwordverify=password_verify($password ,$user['passwd']);
 // set user session if password is verified
-if ($verify_pass) {
+
+if ($passwordverify) {
+    echo $password;
+    echo $user['passwd'];
+    echo '<br>password verify'. $passwordverify;
+    echo '<script>alert("Wrong password for the provided username")</script>';
+    ?>
+
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+   <?php
+}
+else{
     session_start();
     $_SESSION['user'] = $user['passwd'];
-}
-?>
+    ?>
 
-
-<!-- HEADER (NAVBAR) -->
+    <!-- HEADER (NAVBAR) -->
 <section id="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-                <a class="navbar-brand" ><img src="pictures/logo.JPG" height="90px" width="150px"></a>
+                <a class="navbar-brand" ><img src="pictures/logo.JPG" height="50px" width="100px"></a>
                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <a class="nav-link active" href="index.html">Logout </a>
+                        <a style="color: white;" class="nav-link active" href="index.html">Logout </a>
                     </li>
                   </ul>
         </div>
@@ -71,6 +85,7 @@ if ($verify_pass) {
 
 
     <div class="col-sm-4 ">
+        <h1 style="color:blue;">DASHBOARD</h1>
         <!--ENG-->
         <div class="card">
         <div class="card-body">
@@ -113,6 +128,12 @@ if ($verify_pass) {
     </div>
 
 </section>
+<?php
+}
+?>
+
+
+
 
     <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
