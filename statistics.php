@@ -23,6 +23,16 @@
 </head>
 <body>
 
+<?php
+// create database connection
+$conn = mysqli_connect('localhost', 'root', '', 'capstoneviewer');
+
+// check if the connection works
+if (!$conn) {
+    die('Connection failed: ' . mysqli_connect_error());
+}
+
+?>
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -36,19 +46,19 @@
   <div class="row">
     <div class="col-sm-3">
       <p>Total capstone projects</p>
-      <h1>0.00</h1>
+      <h1 id="total">0.00</h1>
     </div>
     <div class="col-sm-3"> 
       <p>Computer science capstone projects percentage</p>
-      <h1>0%</h1>
+      <h1 id="cs">0%</h1>
     </div>
     <div class="col-sm-3"> 
       <p>Engineering capstone total projects percentage</p>
-      <h1>0%</h1>
+      <h1 id="eng">0%</h1>
     </div>
     <div class="col-sm-3">
       <p>Business administration total capstone projects percentage</p>
-      <h1>0%</h1>
+      <h1 id="ba">0%</h1>
     </div>
   </div>
 </div><br>
@@ -58,19 +68,19 @@
   <div class="row">
     <div class="col-sm-3">
       <p>Total supervisors</p>
-      <h1>0.00</h1>
+      <h1 id="sup">0.00</h1>
     </div>
     <div class="col-sm-3"> 
       <p>Male percentage</p>
-      <h1>0%</h1>
+      <h1 id="male">0%</h1>
     </div>
     <div class="col-sm-3"> 
       <p>Female percentage</p>
-      <h1>0%</h1>
+      <h1 id="female">0%</h1>
     </div>
     <div class="col-sm-3">
       <p>Total teams</p>
-      <h1>0.00</h1>
+      <h1 id="team">0.00</h1>
     </div>
   </div>
 </div><br><br>
@@ -82,6 +92,21 @@
 <footer class="container-fluid text-center">
 <p> &copy; CapstoneViewer 2020 | Powered by Afsanat </p>
 </footer>
+
+<?php
+$total = "SELECT count(ProjectID) FROM capstone_project";
+// execute the query
+$result = mysqli_query($conn, $total);
+$row=mysqli_fetch_array($result);
+
+
+  ?>
+
+<script>
+    document.getElementById('total').textContent = <?php echo $row[0] ?>;
+</script>
+
+ 
 
 </body>
 </html>
