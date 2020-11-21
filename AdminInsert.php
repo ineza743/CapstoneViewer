@@ -51,6 +51,15 @@
     <div id="last" class="line-box"></div>
   </label>
   <label>
+	<p class="label-txt">student's Gender</p>
+	<select id="select" name="gender" class="input">
+	        <option value="None">--None--</option>
+            <option value="Male">Male</option>
+			<option value="Female">Female</option>
+          </select>
+    <div id="last" class="line-box"></div>
+  </label>
+  <label>
     <p class="label-txt">date of birth*</p>
     <input  name="dob" type="date" class="input">
     <div id="last" class="line-box"></div>

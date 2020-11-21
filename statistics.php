@@ -67,20 +67,20 @@ if (!$conn) {
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-3">
-      <p>Total supervisors</p>
+      <p>Total Capstone Supporters</p>
       <h1 id="sup">0.00</h1>
     </div>
     <div class="col-sm-3"> 
       <p>Male percentage</p>
-      <h1 id="male">0%</h1>
+      <h1 id="male">0%</h1>  
     </div>
     <div class="col-sm-3"> 
       <p>Female percentage</p>
       <h1 id="female">0%</h1>
     </div>
     <div class="col-sm-3">
-      <p>Total teams</p>
-      <h1 id="team">0.00</h1>
+      <p>Other gender percentage</p>
+      <h1 id="other">0%</h1>
     </div>
   </div>
 </div><br><br>
@@ -95,15 +95,56 @@ if (!$conn) {
 
 <?php
 $total = "SELECT count(ProjectID) FROM capstone_project";
+$totalsd = "SELECT count(StudentID) FROM students";
+$totalsupporter = "SELECT count(SupporterID) FROM supporter";
+$femaletotal = "SELECT count(StudentID) FROM students where gender='Female'";
+$maletotal = "SELECT count(StudentID) FROM students where gender='Male'";
+$othertotal = "SELECT count(StudentID) FROM students where gender<>'Male' AND gender<>'Female'";
+$batotal = "SELECT count(StudentID) FROM students where MajorID=1";
+$cstotal = "SELECT count(StudentID) FROM students where MajorID=2 || MajorID=3 ";
+$engtotal = "SELECT count(StudentID) FROM students where MajorID=4 || MajorID=5 || MajorID=6  ";
+
 // execute the query
-$result = mysqli_query($conn, $total);
+$resultcapstone = mysqli_query($conn, $total);
+$rowcapstone=mysqli_fetch_array($resultcapstone);
+
+$result = mysqli_query($conn, $totalsd);
 $row=mysqli_fetch_array($result);
 
+$resultsup = mysqli_query($conn, $totalsupporter);
+$rowsup=mysqli_fetch_array($resultsup);
+
+$resultfemaleperc = mysqli_query($conn, $femaletotal);
+$rowfemaleperc=mysqli_fetch_array($resultfemaleperc);
+
+$resultmaleperc = mysqli_query($conn, $maletotal);
+$rowmaleperc=mysqli_fetch_array($resultmaleperc);
+
+$resultotherperc = mysqli_query($conn, $othertotal);
+$rowotherperc=mysqli_fetch_array($resultotherperc);
+
+$resultba = mysqli_query($conn, $batotal);
+$rowmba=mysqli_fetch_array($resultba);
+
+$resultcs = mysqli_query($conn, $cstotal);
+$rowcs=mysqli_fetch_array($resultcs);
+
+$resuleng = mysqli_query($conn, $engtotal);
+$roweng=mysqli_fetch_array($resuleng);
 
   ?>
 
 <script>
-    document.getElementById('total').textContent = <?php echo $row[0] ?>;
+    document.getElementById('total').textContent = <?php echo $rowcapstone[0] ?>;
+    document.getElementById('female').textContent = <?php echo round(($rowfemaleperc[0]/$row[0])*100,2) ?>;
+    document.getElementById('male').textContent = <?php echo round(($rowmaleperc[0]/$row[0])*100,2) ?>;
+    document.getElementById('other').textContent = <?php echo round(($rowotherperc[0]/$row[0])*100,2) ?>;
+
+    document.getElementById('ba').textContent = <?php echo round(($rowmba[0]/$row[0])*100,2) ?>;
+    document.getElementById('cs').textContent = <?php echo round(($rowcs[0]/$row[0])*100,2) ?>;
+    document.getElementById('eng').textContent = <?php echo round(($roweng[0]/$row[0])*100,2) ?>;
+
+    document.getElementById('sup').textContent = <?php echo $rowsup[0] ?>;
 </script>
 
  

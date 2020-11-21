@@ -27,6 +27,7 @@ $lastname = $_POST['l_name'];
 $stid = $_POST['sid'];
 $dob = $_POST['dob'];
 $major = $_POST['major'];
+$gender = $_POST['gender'];
 $sfirstname = $_POST['sf_name'];
 $slastname = $_POST['sl_name'];
 $desc = $_POST['desc'];
@@ -58,7 +59,7 @@ if($major=="ce"){
 // sql querry to insert
 $insertSupporter = "INSERT INTO Supporter (capstoneSupporterID,first_name,last_name,motif) VALUES (1,'$sfirstname','$slastname','$motif')";
 $insertSupervisor = "INSERT INTO Supervisor (SupporterID) VALUES (1)";
-$insertstudent = "INSERT INTO students (StudentID,MajorID,first_name, last_name,date_of_birth,year_of_graduation,email) VALUES ('$stid','$majorID', '$firstname','$lastname','$dob','$grad','$email')";
+$insertstudent = "INSERT INTO students (StudentID,MajorID,first_name, last_name,date_of_birth,year_of_graduation,email,gender) VALUES ('$stid','$majorID', '$firstname','$lastname','$dob','$grad','$email','$gender')";
 $insertcapstone = "INSERT INTO capstone_project (capstoneSupporterID,administratorId, project_name,year_of_accomplishment,team_name,descriptions) VALUES (1, 1,'$capstone','$grad','$team','$desc')";
 $insertStudentTeam = "INSERT INTO StudentTeam (StudentID,ProjectID) VALUES ('$stid',1)";
 
