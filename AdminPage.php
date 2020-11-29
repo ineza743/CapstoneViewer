@@ -86,15 +86,7 @@ else{
 
 
     <div class="col-sm-4 ">
-        <!--View-->
-        <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">VIEW</h5>
-            <p class="card-text"> You can view all capstone done in Ashesi University by department
-            </p>
-            <a id="action-btn" href="dashboard.php" class="btn btn-primary action-btn">View</a>
-        </div>
-        </div>
+
 
         <!--Insert-->
         <div class="card">
@@ -109,10 +101,11 @@ else{
                 <!--Edit-->
                 <div class="card">
         <div class="card-body">
-            <h5 class="card-title">EDIT</h5>
-            <p class="card-text"> You can edit existing capstone records here
+            <h5 class="card-title">VIEW/EDIT/DELETE</h5>
+            <p class="card-text"> You can view all capstone done in Ashesi University by department. 
+            You can edit existing capstone records here or delete a capstone project
             </p>
-            <a id="action-btn" href="AdminInsert.php" class="btn btn-primary action-btn">Edit</a>
+            <a id="action-btn" href="dashboard.php" class="btn btn-primary action-btn">Edit</a>
         </div>
         </div>
 

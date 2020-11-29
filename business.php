@@ -8,6 +8,7 @@
     
     <!-- Latest compiled and minified CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
     <!-- my external css-->
     <link rel="stylesheet" href="business.css">
 
@@ -15,72 +16,48 @@
 <body>
 
 
-<!-- HEADER (NAVBAR) -->
-<section id="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-                <a class="navbar-brand" ><img src="pictures/logo.JPG" height="90px" width="150px"></a>
-               
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
-                      <a class="nav-link active" href="#">Home </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#banner">About </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a class="nav-link" href="#">Statistics </a>
-                      </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#action-btn">Logout </a>
-                    </li>
-                  </ul>
-        </div>
-        </div> 
-      </nav>
-</section>
 
+ <!--BA-->
+    <div class="text-center" style="border: solid 5px black;">
+      <h4 id="section1"><strong>Business administration</strong></h4>
 
+<table class="table">
+<thead>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Capstone project</th>
+    <th>date</th>
+</tr>
+</thead>
 
+<tbody>
+  <?php
+  // database connection
+$conn = mysqli_connect('localhost', 'root', '', 'capstoneviewer');
 
+// check if the database connection was successful
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-<!--BA-->
-<div class="row">
+$select = "SELECT * FROM students";
+$result = mysqli_query($conn, $select);
+while($row = mysqli_fetch_assoc($result)){
+  ?>
+  <tr> 
+    <td> <?php echo $row['first_name']; ?></td>
+    <td> <?php echo $row['last_name']; ?></td>
+    <td> <?php echo $row['email']; ?></td>
+    <td> <?php echo $row['year_of_graduation']; ?></td>
+  </tr>
+  <?php
+}
+  ?>
+</tbody>
+</table>
 
-
-
-  <div class="text-center" class="col-md-6 mb-4" >
-  <h4 id="section1"><strong>Business administration Major</strong></h4>
-        <!-- Search box -->
-        <form class="form-inline">
-        <i class="fas fa-search" aria-hidden="true"></i>
-        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-            aria-label="Search">
-          </form>
-
-    <div class="card example-1 scrollbar-ripe-malinka">
-      <div class="card-body" >
-
-
-        <br><a href="#">01/10/2020    weather application</a><br>
-        <a href="#">02/10/2020    Cyusa More</a><br>
-        <a href="#">03/10/2020    Meme generator</a><br>
-        <a href="#">04/10/2020    Google map</a><br>
-        <a href="#">26/10/2020    Library website</a><br>
-        <a href="#">27/10/2020    Blog</a><br>
-        <a href="#">28/10/2020    Uwase Delilah</a><br>
-        <a href="#">29/10/2020    Uwase Delilah</a><br>
-        <a href="#">30/10/2020    Uwase Delilah</a><br>
-        <a href="#">03/10/2020    Meme generator</a><br>
-        <a href="#">03/10/2020    Meme generator</a><br>
-        <a href="#">03/10/2020    Meme generator</a><br>
-        <a href="#">03/10/2020    Meme generator</a><br>
-        <a href="#">03/10/2020    Meme generator</a><br>
-      </div>
-    </div>
-
-  </div>
+</div>
 
 
 
@@ -93,15 +70,19 @@
 
 </section>
 
-    <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap.min.js"></script>
 
+<script>
+  $(".table").DataTable();
+</script>
 </body>
 </html>
 

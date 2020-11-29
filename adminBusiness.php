@@ -17,17 +17,19 @@
 
 
 
- <!--CS-->
-    <div class="text-center" style="border: solid 5px black;">
-      <h4 id="section1"><strong>Computer science</strong></h4>
+ <!--BA-->
+    <div class="text-center">
+      <h4 id="section1"><strong>Business administration</strong></h4>
 
-<table class="table">
+<table class="table" width="400" border="2">
 <thead>
   <tr>
     <th>First name</th>
     <th>Last name</th>
     <th>Capstone project</th>
     <th>date</th>
+    <th>Delete</th>
+    <th>Edit</th>
 </tr>
 </thead>
 
@@ -50,60 +52,30 @@ while($row = mysqli_fetch_assoc($result)){
     <td> <?php echo $row['last_name']; ?></td>
     <td> <?php echo $row['email']; ?></td>
     <td> <?php echo $row['year_of_graduation']; ?></td>
+    <td> <a href="delete.php?del=$output[studentID]">Delete</a> </td>
+    <td> <a href="edit.php?edit=$output[studentID]">Update</a> </td>
   </tr>
   <?php
 }
+
   ?>
+    
+   
 </tbody>
 </table>
-</div>
 
-<div>
-  <p><br></p>
-</div>
-
-<!--MIS-->
-<div class="text-center" style="border: solid 4px black;">
-      <h4 id="section1"><strong>Management information system</strong></h4>
-
-<table class="table">
-<thead>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Capstone project</th>
-    <th>date</th>
-</tr>
-</thead>
-
-<tbody>
-  <?php
-  // database connection
-$conn = mysqli_connect('localhost', 'root', '', 'capstoneviewer');
-
-// check if the database connection was successful
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-$select = "SELECT * FROM students";
-$result = mysqli_query($conn, $select);
-while($row = mysqli_fetch_assoc($result)){
-  ?>
-  <tr> 
-    <td> <?php echo $row['first_name']; ?></td>
-    <td> <?php echo $row['last_name']; ?></td>
-    <td> <?php echo $row['email']; ?></td>
-    <td> <?php echo $row['year_of_graduation']; ?></td>
-  </tr>
-  <?php
-}
-  ?>
-</tbody>
-</table>
 </div>
 
 
+
+<!--Footer section-->
+<section id="footer">
+
+    <div class="footer">
+        <p> &copy; CapstoneViewer 2020 | Powered by Afsanat </p>
+    </div>
+
+</section>
 
     
 <!-- Popper JS -->
