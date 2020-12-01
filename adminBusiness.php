@@ -13,28 +13,35 @@
     <link rel="stylesheet" href="business.css">
 
 </head>
-<body>
+<body style= "background-color: aliceblue;">
 
 
 
  <!--BA-->
-    <div class="text-center">
-      <h4 id="section1"><strong>Business administration</strong></h4>
+    <div class="container">
+      <h4 style= "text-align:center;" id="section1"><strong>Business administration</strong></h4>
 
 <table class="table" width="400" border="2">
 <thead>
   <tr>
+  <th>Capstone project</th>
     <th>First name</th>
     <th>Last name</th>
-    <th>Capstone project</th>
-    <th>date</th>
+    <th>email</th>
+    <th>gender</th>
+    <th>Major name</th>
+    <th>graduation date</th>
+    <th>Descriptions</th>
     <th>Delete</th>
     <th>Edit</th>
 </tr>
 </thead>
 
 <tbody>
+
+
   <?php
+
   // database connection
 $conn = mysqli_connect('localhost', 'root', '', 'capstoneviewer');
 
@@ -43,23 +50,32 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$select = "SELECT * FROM students";
+$select = "SELECT * FROM students INNER JOIN major ON students.majorid = major.majorid";
+$selectproject="SELECT distinct capstone_project.project_name, capstone_project.descriptions from capstone_project INNER JOIN studentteam  ON studentteam.ProjectID=capstone_project.ProjectID";
+
 $result = mysqli_query($conn, $select);
-while($row = mysqli_fetch_assoc($result)){
+$resultproject = mysqli_query($conn, $selectproject);
+
+
+while( $row = mysqli_fetch_array($result)){
   ?>
   <tr> 
+    <?php $rowproject = mysqli_fetch_array($resultproject); ?>
+  <td> <?php echo $rowproject[0]; ?></td> 
     <td> <?php echo $row['first_name']; ?></td>
     <td> <?php echo $row['last_name']; ?></td>
     <td> <?php echo $row['email']; ?></td>
-    <td> <?php echo $row['year_of_graduation']; ?></td>
-    <td> <a href="delete.php?del=$output[studentID]">Delete</a> </td>
-    <td> <a href="edit.php?edit=$output[studentID]">Update</a> </td>
-  </tr>
-  <?php
-}
+    <td> <?php echo $row['gender']; ?></td>
 
-  ?>
-    
+    <td> <?php echo $row['major_name']; ?></td>
+    <td> <?php echo $row['year_of_graduation']; ?></td>
+    <td> <?php echo $rowproject[1]; ?></td>
+    <td> <a href="delete.php?del=<?php echo $row['StudentID']; ?>  " >Delete</a> </td>
+    <td> <a href="edit.php?edit=<?php echo $row['StudentID']; ?>  " >Edit</a> </td>
+  </tr>
+<?php
+}
+?>
    
 </tbody>
 </table>

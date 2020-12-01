@@ -67,7 +67,7 @@ if (!$conn) {
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-3">
-      <p>Total Capstone Supporters</p>
+      <p>Total Capstone teams</p>
       <h1 id="sup">0.00</h1>
     </div>
     <div class="col-sm-3"> 
@@ -94,9 +94,8 @@ if (!$conn) {
 </footer>
 
 <?php
-$total = "SELECT count(ProjectID) FROM capstone_project";
+$total = "SELECT count(distinct project_name) FROM capstone_project";
 $totalsd = "SELECT count(StudentID) FROM students";
-$totalsupporter = "SELECT count(SupporterID) FROM supporter";
 $femaletotal = "SELECT count(StudentID) FROM students where gender='Female'";
 $maletotal = "SELECT count(StudentID) FROM students where gender='Male'";
 $othertotal = "SELECT count(StudentID) FROM students where gender<>'Male' AND gender<>'Female'";
@@ -110,9 +109,6 @@ $rowcapstone=mysqli_fetch_array($resultcapstone);
 
 $result = mysqli_query($conn, $totalsd);
 $row=mysqli_fetch_array($result);
-
-$resultsup = mysqli_query($conn, $totalsupporter);
-$rowsup=mysqli_fetch_array($resultsup);
 
 $resultfemaleperc = mysqli_query($conn, $femaletotal);
 $rowfemaleperc=mysqli_fetch_array($resultfemaleperc);
@@ -144,7 +140,7 @@ $roweng=mysqli_fetch_array($resuleng);
     document.getElementById('cs').textContent = <?php echo round(($rowcs[0]/$row[0])*100,2) ?>;
     document.getElementById('eng').textContent = <?php echo round(($roweng[0]/$row[0])*100,2) ?>;
 
-    document.getElementById('sup').textContent = <?php echo $rowsup[0] ?>;
+    document.getElementById('sup').textContent = <?php echo $roweng[0] ?>;
 </script>
 
  

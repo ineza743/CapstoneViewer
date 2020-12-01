@@ -28,12 +28,10 @@ $stid = $_POST['sid'];
 $dob = $_POST['dob'];
 $major = $_POST['major'];
 $gender = $_POST['gender'];
-$sfirstname = $_POST['sf_name'];
-$slastname = $_POST['sl_name'];
 $desc = $_POST['desc'];
 $grad = $_POST['grad'];
 $team = $_POST['t-name'];
-$motif = $_POST['motif'];
+
 
 
 if($major=="ba"){
@@ -56,26 +54,26 @@ if($major=="ce"){
 }
 
 
+
 // sql querry to insert
-$insertSupporter = "INSERT INTO Supporter (capstoneSupporterID,first_name,last_name,motif) VALUES (1,'$sfirstname','$slastname','$motif')";
-$insertSupervisor = "INSERT INTO Supervisor (SupporterID) VALUES (1)";
 $insertstudent = "INSERT INTO students (StudentID,MajorID,first_name, last_name,date_of_birth,year_of_graduation,email,gender) VALUES ('$stid','$majorID', '$firstname','$lastname','$dob','$grad','$email','$gender')";
-$insertcapstone = "INSERT INTO capstone_project (capstoneSupporterID,administratorId, project_name,year_of_accomplishment,team_name,descriptions) VALUES (1, 1,'$capstone','$grad','$team','$desc')";
-$insertStudentTeam = "INSERT INTO StudentTeam (StudentID,ProjectID) VALUES ('$stid',1)";
+$insertcapstone = "INSERT INTO capstone_project (administratorId, project_name,year_of_accomplishment,team_name,descriptions) VALUES (1,'$capstone','$grad','$team','$desc')";
+$insertStudentTeam = "INSERT INTO StudentTeam (StudentID,ProjectID) VALUES ('$stid',LAST_INSERT_ID())";
+
 
 // execute the insert querry
-$result1 = mysqli_query($dbconn, $insertSupporter);
-$result2 = mysqli_query($dbconn, $insertSupervisor);
-$result3 = mysqli_query($dbconn, $insertstudent);
-$result4 = mysqli_query($dbconn,$insertcapstone);
-//$result5 = mysqli_query($dbconn, $insertStudentTeam);
+$result1 = mysqli_query($dbconn, $insertstudent);
+$result2 = mysqli_query($dbconn,$insertcapstone);
+$result3 = mysqli_query($dbconn, $insertStudentTeam);
 // check if the querry was executed
-if ($result1 && $result2 && $result3 && $result4 ) {
+
+/**<div class="text-center">
+<a href="AdminPage.php"  class="btn btn-primary action-btn">Back</a>
+</div>*/
+if ($result1 && $result2 && $result3) {
     ?>
     <p style="text-align: center;">User successfully Inserted</p>
-    <div class="text-center">
-    <a href="index.html"  class="btn btn-primary action-btn">Back</a>
-     </div>
+   
     <?php 
 } else {
     echo "Error: ". mysqli_error($dbconn);?>
@@ -85,8 +83,7 @@ if ($result1 && $result2 && $result3 && $result4 ) {
     <?php 
 }
 
-//  close connection
-mysqli_close($dbconn);
+
 ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

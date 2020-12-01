@@ -63,28 +63,6 @@ else{
     $_SESSION['user'] = $user['passwd'];
     ?>
 
-
-
-
-    <!-- HEADER (NAVBAR) -->
-    <section id="header">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-                <a class="navbar-brand" ><img src="pictures/logo.JPG" height="50px" width="100px"></a>
-               
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
-                        <a style="color: white;" class="nav-link active" href="index.html">Logout </a>
-                    </li>
-                  </ul>
-        </div>
-        </div> 
-      </nav>
-</section>
-
-
-
     <div class="col-sm-4 ">
 
 
@@ -105,7 +83,7 @@ else{
             <p class="card-text"> You can view all capstone done in Ashesi University by department. 
             You can edit existing capstone records here or delete a capstone project
             </p>
-            <a id="action-btn" href="dashboard.php" class="btn btn-primary action-btn">Edit</a>
+            <a id="action-btn" href="admindashboard.php" class="btn btn-primary action-btn">Edit</a>
         </div>
         </div>
 

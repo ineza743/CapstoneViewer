@@ -24,7 +24,7 @@
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="text-center">
-                            <button class="btn btn-primary action-btn" type="submit">Login</button>
+                            <button class="btn btn-primary action-btn" type="submit" >Login</button>
                             </div>
                         </form>
                     </div>

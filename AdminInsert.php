@@ -70,22 +70,6 @@
     <div id="last" class="line-box"></div>
   </label>
   <label>
-    <p class="label-txt">supervisor last name</p>
-    <input  name="sf_name" type="text" class="input">
-    <div id="last" class="line-box"></div>
-  </label>
-  <label>
-    <p class="label-txt">supervisor last name</p>
-    <input  name="sl_name" type="text" class="input">
-    <div id="last" class="line-box"></div>
-  </label>
-  <label>
-  <label>
-    <p class="label-txt">supervisor motif</p>
-    <input  name="motif" type="text" class="input">
-    <div id="last" class="line-box"></div>
-  </label>
-  <label>
     <p class="label-txt">Project description*</p>
     <input  name="desc" type="text" class="input">
     <div id="last" class="line-box"></div>

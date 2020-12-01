@@ -1,4 +1,4 @@
-let form = document.getElementById('form');  //get the form instance
+let form = document.getElementById('form2');  //get the form instance
 
 /**validation function */
 function validation() {
@@ -6,7 +6,7 @@ let capstone = form.elements["C_name"].value;
 let first = form.elements["f_name"].value;
 let last = form.elements["l_name"].value;
 let emails = form.elements["email"].value;
-let stid = form.elements["sid"].value;
+let stid = form.elements["stid"].value;
 let dob = form.elements["dob"].value;
 let yr = form.elements["grad"].value;
 let description = form.elements["desc"].value;
@@ -14,8 +14,6 @@ let description = form.elements["desc"].value;
 
 /**regex for email since it is an Ashesi email, it should end with @ashesi.edu.gh */
 let Emailreg = /^[\w.\.+w.+\-]+@ashesi.edu.gh$/;  
-let ashesiID =  /^(\d{4})(\d{4})$/gi;  //the ID entered should be eight numbers
-let yearGrad =  /^(\d{4})$/gi;  //the year of graduation should be four numbers
 
 /**validate inputs and make sure they are not empty */
 if (capstone === "") {
@@ -32,9 +30,8 @@ if (capstone === "") {
             window.alert("student last name can not be empty");
             return false;
         }
-        //an ashesi ID is eight numbers
-        if (stid=== "" || !ashesiID.test(stid)) {
-            window.alert("student id can not be empty and should be eight numbers");
+        if (stid=== "") {
+            window.alert("student id can not be empty");
             return false;
         }
  
@@ -54,13 +51,17 @@ if (capstone === "") {
             window.alert("date of birth can not be empty can not be empty");
             return false;
         }
-        if (yr === "" || !yearGrad.test(yr)) {
-            window.alert("year of graduation can not be empty and should be four numbers");
+        if (yr === "") {
+            window.alert("year of graduation can not be empty");
             return false;
         }
         if (description === "") {
             window.alert("description can not be empty");
             return false;
         }
-
+        else{  
+           //if(confirm("User successfully edited")) window.history.back() ;
+           window.alert("User successfully edited");
+           
+        }
 }
