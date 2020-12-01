@@ -42,7 +42,7 @@
             <h5 class="card-title">Engineering</h5>
             <p class="card-text"> All capstone projects under the Engineering department
             </p>
-            <a id="action-btn" href="engineering.php" class="btn btn-primary action-btn">VIEW</a>
+            <a id="action-btn" href="adminBusiness.php" class="btn btn-primary action-btn">VIEW</a>
         </div>
         </div>
 
@@ -52,7 +52,7 @@
             <h5 class="card-title">Computer Science and information systems</h5>
             <p class="card-text"> All capstone projects under the Computer Science and information systems department
             </p>
-            <a id="action-btn" href="computer.php" class="btn btn-primary action-btn">VIEW</a>
+            <a id="action-btn" href="adminBusiness.php" class="btn btn-primary action-btn">VIEW</a>
         </div>
         </div>
 

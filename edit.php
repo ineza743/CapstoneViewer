@@ -10,16 +10,19 @@ if (!$conn) {
 
 $id = $_GET['edit'];
 if(count($_POST)>0) {
-    mysqli_query($conn,"UPDATE students set first_name='" . $_POST['f_name'] . "', last_name='" . $_POST['l_name'] . "' WHERE StudentID='$id'");
-    $message = "Record Modified Successfully";
+    mysqli_query($conn,"UPDATE students set first_name='" . $_POST['f_name'] . "', last_name='" . $_POST['l_name'] . "',email='" . $_POST['email'] . "', year_of_graduation='" . $_POST['grad'] . "' WHERE StudentID='$id'");
+    mysqli_query($conn,"UPDATE capstone_project set project_name='" . $_POST['C_name'] . "', descriptions='" . $_POST['desc'] . "' WHERE StudentID='$id'");
 }
 
         $sqledit= "SELECT * FROM students where StudentID = '$id'";
+        $sqlproject= "SELECT * FROM studentteam where StudentID = '$id'";
+
         $res = mysqli_query($conn, $sqledit);
         $row = mysqli_fetch_array($res);
-    
 
-
+        $resp = mysqli_query($conn, $sqlproject);
+        $rowproject = mysqli_fetch_array($resp);
+  
 
 
 ?>
@@ -40,7 +43,7 @@ if(count($_POST)>0) {
 
   <label>
     <p class="label-txt">capstone name*</p>
-    <input  name="C_name" type="text" class="input" value = "<?php echo $row[2]; ?>">
+    <input  name="C_name" type="text" class="input" value = "<?php echo $rowproject[1]; ?>">
     <div id="first" class="line-box"></div>
   </label>
   <label>
@@ -99,12 +102,12 @@ if(count($_POST)>0) {
 
   <label>
     <p class="label-txt">Project description*</p>
-    <input  name="desc" type="text" class="input" value = "<?php echo $row[1]; ?>">
+    <input  name="desc" type="text" class="input" value = "<?php echo $rowproject[1]; ?>">
     <div id="last" class="line-box"></div>
   </label>
   <label>
     <p class="label-txt">team name</p>
-    <input  name="t-name" type="text" class="input" value = "<?php echo $row[1]; ?>">
+    <input  name="t-name" type="text" class="input" value = "<?php echo $rowproject[1]; ?>">
     <div id="last" class="line-box"></div>
   </label>
 
